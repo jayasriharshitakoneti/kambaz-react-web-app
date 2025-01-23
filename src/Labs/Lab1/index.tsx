@@ -98,7 +98,54 @@ export default function Lab1() {
               <td>2/10/21</td>
               <td>90</td>
             </tr>
-            <tr> ... </tr>
+            <tr>
+              <td>Q3</td>
+              <td>ABC</td>
+              <td>2/11/21</td>
+              <td>91</td>
+            </tr>
+            <tr>
+              <td>Q4</td>
+              <td>QER</td>
+              <td>2/12/21</td>
+              <td>92</td>
+            </tr>
+            <tr>
+              <td>Q5</td>
+              <td>FRG</td>
+              <td>2/13/21</td>
+              <td>93</td>
+            </tr>
+            <tr>
+              <td>Q6</td>
+              <td>DFE</td>
+              <td>2/14/21</td>
+              <td>94</td>
+            </tr>
+            <tr>
+              <td>Q7</td>
+              <td>SDS</td>
+              <td>2/15/21</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>Q28</td>
+              <td>EEE</td>
+              <td>2/16/21</td>
+              <td>96</td>
+            </tr>
+            <tr>
+              <td>Q9</td>
+              <td>EE</td>
+              <td>2/17/21</td>
+              <td>97</td>
+            </tr>
+            <tr>
+              <td>Q10</td>
+              <td>CS</td>
+              <td>2/18/21</td>
+              <td>98</td>
+            </tr>
           </tbody>
           <tfoot>
             <tr>
