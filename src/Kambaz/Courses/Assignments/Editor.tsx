@@ -120,7 +120,6 @@ export default function AssignmentEditor() {
           </td>
           <td>
             <label htmlFor="wd-available-until">Until</label>
-            Until
             <br />
             <input type="date" value="2024-05-20" id="wd-available-until" />
             <br />

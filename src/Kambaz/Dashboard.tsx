@@ -7,10 +7,25 @@ export default function Dashboard() {
       <div id="wd-dashboard-courses">
         <div className="wd-dashboard-course">
           <Link
+            to="/Kambaz/Courses/1234/Home"
+            className="wd-dashboard-course-link"
+          >
+            <img src="/images/reactjs.png" width={200} />
+            <div>
+              <h5> CS1234 React JS </h5>
+              <p className="wd-dashboard-course-title">
+                Full Stack software developer{" "}
+              </p>
+              <button> Go </button>
+            </div>
+          </Link>
+        </div>
+        <div className="wd-dashboard-course">
+          <Link
             to="/Kambaz/Courses/123/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="/images/reactjs.jpg" width={200} />
+            <img src="/images/angularjs.jpg" width={200} />
             <div>
               <h5> CS123 Angular JS </h5>
               <p className="wd-dashboard-course-title">
@@ -25,7 +40,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/234/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="/images/reactjs.jpg" width={200} />
+            <img src="/images/machinelearning.jpg" width={200} />
             <div>
               <h5> CS234 Machine Learning </h5>
               <p className="wd-dashboard-course-title">
@@ -40,7 +55,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/345/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="/images/reactjs.jpg" width={200} />
+            <img src="/images/embeddedsystems.jpg" width={200} />
             <div>
               <h5> CS345 Embedded Systems </h5>
               <p className="wd-dashboard-course-title">
@@ -55,7 +70,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/456/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="/images/reactjs.jpg" width={200} />
+            <img src="/images/python.jpg" width={200} />
             <div>
               <h5> CS456 Intro to Python </h5>
               <p className="wd-dashboard-course-title">
@@ -70,7 +85,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/567/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="/images/reactjs.jpg" width={200} />
+            <img src="/images/cloudcomputing.jpg" width={200} />
             <div>
               <h5> CS567 Cloud Computing </h5>
               <p className="wd-dashboard-course-title">
@@ -85,7 +100,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/678/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="/images/reactjs.jpg" width={200} />
+            <img src="/images/kafka.png" width={200} />
             <div>
               <h5> CS678 Kafka </h5>
               <p className="wd-dashboard-course-title">
@@ -100,7 +115,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/789/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="/images/reactjs.jpg" width={200} />
+            <img src="/images/terraform.png" width={200} />
             <div>
               <h5> CS789 Terraform </h5>
               <p className="wd-dashboard-course-title">

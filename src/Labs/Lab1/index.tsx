@@ -150,7 +150,7 @@ export default function Lab1() {
           <tfoot>
             <tr>
               <td colSpan={3}>Average</td>
-              <td>90</td>
+              <td>93.1</td>
             </tr>
           </tfoot>
         </table>
@@ -173,7 +173,7 @@ export default function Lab1() {
         <form id="wd-text-fields">
           <h5>Text Fields</h5>
           <label htmlFor="wd-text-fields-username">Username:</label>
-          <input placeholder="jdoe" id="wd-text-fields-username" /> <br />
+          <input placeholder="jkoneti" id="wd-text-fields-username" /> <br />
           <label htmlFor="wd-text-fields-password">Password:</label>
           <input
             type="password"
@@ -182,13 +182,17 @@ export default function Lab1() {
           />
           <br />
           <label htmlFor="wd-text-fields-first-name">First name:</label>
-          <input type="text" title="John" id="wd-text-fields-first-name" />{" "}
+          <input
+            type="text"
+            title="Harshita"
+            id="wd-text-fields-first-name"
+          />{" "}
           <br />
           <label htmlFor="wd-text-fields-last-name">Last name:</label>
           <input
             type="text"
-            placeholder="Doe"
-            value="Wonderland"
+            placeholder="Koneti"
+            value="Koneti"
             title="The last name"
             id="wd-text-fields-last-name"
           />
@@ -259,7 +263,7 @@ export default function Lab1() {
       <label htmlFor="wd-text-fields-email"> Email: </label>
       <input
         type="email"
-        placeholder="jdoe@somewhere.com"
+        placeholder="koneti.j@northeastern.edu"
         id="wd-text-fields-email"
       />
       <br />
@@ -276,7 +280,7 @@ export default function Lab1() {
         type="range"
         value="4"
         max="5"
-        placeholder="Doe"
+        placeholder="Koneti"
         id="wd-text-fields-rating"
       />
       <br />

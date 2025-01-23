@@ -3,6 +3,12 @@ export default function Modules() {
     <div>
       <button>Collapse All</button>
       <button>View Progress</button>
+      <select id="wd-publish-module">
+        <option value="PUBLISHALL">Publish All</option>
+        <option value="PUBLISHTHISLECTURE">Publish this lecture</option>
+        <option value="PUBLISHTHISWEEK">Publish this week's lectures</option>
+      </select>
+      <button> + Module</button>
       <ul id="wd-modules">
         <li className="wd-module">
           <div className="wd-title">Week 1</div>
