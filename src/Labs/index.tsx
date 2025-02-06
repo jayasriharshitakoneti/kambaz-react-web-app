@@ -12,7 +12,6 @@ export default function Labs() {
       Code repo link:{" "}
       <a
         href="https://github.com/jayasriharshitakoneti/kambaz-react-web-app"
-        id="wd-github"
         target="_blank"
       >
         Link
