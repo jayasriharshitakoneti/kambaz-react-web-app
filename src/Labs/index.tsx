@@ -8,6 +8,16 @@ export default function Labs() {
     <div>
       <h1>Labs</h1>
       <h2>Jaya Sriharshita Koneti</h2>
+      <br />
+      Code repo link:{" "}
+      <a
+        href="https://github.com/jayasriharshitakoneti/kambaz-react-web-app"
+        id="wd-github"
+        target="_blank"
+      >
+        Link
+      </a>
+      <br />
       <TOC />
       <Routes>
         <Route path="/" element={<Navigate to="Lab1" />} />
