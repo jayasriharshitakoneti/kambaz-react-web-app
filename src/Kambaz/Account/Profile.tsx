@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Profile() {
   return (
-    <div
-      className="profile-container"
-      style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}
-    >
+    <div className="profile-container">
       <h3>Profile</h3>
       <Form>
         <Form.Group className="mb-3" controlId="formUsername">
