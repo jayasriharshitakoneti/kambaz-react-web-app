@@ -4,7 +4,7 @@ import { MdOutlineSearch } from "react-icons/md";
 
 export default function AssignmentButtons() {
   return (
-    <div id="wd-assignments-controls" className="text-nowrap">
+    <div id="wd-assignment-buttons" className="text-nowrap">
       <Button
         variant="danger"
         className="me-1 float-end"
@@ -21,7 +21,7 @@ export default function AssignmentButtons() {
         <FaPlus className="position-relative me-2" />
         Group
       </Button>
-      <InputGroup className="mb-2 w-50">
+      <InputGroup className="w-25">
         <InputGroup.Text>
           <MdOutlineSearch />
         </InputGroup.Text>

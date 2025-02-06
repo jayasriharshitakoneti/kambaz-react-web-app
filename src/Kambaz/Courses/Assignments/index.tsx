@@ -14,7 +14,7 @@ export default function Assignments() {
       <br />
       <br />
       <ListGroup className="rounded-0" id="wd-modules">
-        <ListGroup.Item className="wd-module p-0 mb-5 fs-5 border-gray">
+        <ListGroup.Item className="wd-module p-0 mb-5 fs-4 border-gray">
           <div className="wd-title p-3 ps-2 bg-secondary">
             <BsGripVertical className="me-2 fs-3" />
             ASSIGNMENTS
@@ -28,7 +28,7 @@ export default function Assignments() {
                 <div className="">
                   <a
                     href="#/Kambaz/Courses/1234/Assignments/123"
-                    className="fs-5 fw-bold wd-assignment-link text-decoration-none text-black"
+                    className="fs-4 fw-bold wd-assignment-link  text-black"
                   >
                     A1
                   </a>
@@ -44,10 +44,8 @@ export default function Assignments() {
                 </div>
               </div>
               <div className="ms-auto">
-                <div className="float-end">
-                  <GreenCheckmark />
-                  <IoEllipsisVertical className="fs-4" />
-                </div>
+                <GreenCheckmark />
+                <IoEllipsisVertical className="fs-4" />
               </div>
             </ListGroup.Item>
           </ListGroup>
@@ -59,7 +57,7 @@ export default function Assignments() {
                 <div className="">
                   <a
                     href="#/Kambaz/Courses/1234/Assignments/123"
-                    className="fs-5 fw-bold wd-assignment-link text-decoration-none text-black"
+                    className="fs-4 fw-bold wd-assignment-link  text-black"
                   >
                     A2
                   </a>
@@ -75,10 +73,8 @@ export default function Assignments() {
                 </div>
               </div>
               <div className="ms-auto">
-                <div className="float-end">
-                  <GreenCheckmark />
-                  <IoEllipsisVertical className="fs-4" />
-                </div>
+                <GreenCheckmark />
+                <IoEllipsisVertical className="fs-4" />
               </div>
             </ListGroup.Item>
           </ListGroup>
@@ -90,7 +86,7 @@ export default function Assignments() {
                 <div className="">
                   <a
                     href="#/Kambaz/Courses/1234/Assignments/123"
-                    className="fs-5 fw-bold wd-assignment-link text-decoration-none text-black"
+                    className="fs-4 fw-bold wd-assignment-link  text-black"
                   >
                     A3
                   </a>
@@ -106,10 +102,8 @@ export default function Assignments() {
                 </div>
               </div>
               <div className="ms-auto">
-                <div className="float-end">
-                  <GreenCheckmark />
-                  <IoEllipsisVertical className="fs-4" />
-                </div>
+                <GreenCheckmark />
+                <IoEllipsisVertical className="fs-4" />
               </div>
             </ListGroup.Item>
           </ListGroup>
