@@ -1,15 +1,9 @@
 import { Button } from "react-bootstrap";
 import { BiImport } from "react-icons/bi";
 import { FaCheckCircle } from "react-icons/fa";
-import { GiBeerHorn } from "react-icons/gi";
 import { IoMdHome, IoIosNotifications } from "react-icons/io";
 import { LiaFileImportSolid } from "react-icons/lia";
-import {
-  MdAnnouncement,
-  MdDoNotDisturbAlt,
-  MdOutlineAnnouncement,
-  MdSpeaker,
-} from "react-icons/md";
+import { MdDoNotDisturbAlt } from "react-icons/md";
 import { RiBarChart2Fill } from "react-icons/ri";
 import { TfiAnnouncement } from "react-icons/tfi";
 
