@@ -8,7 +8,7 @@ export default function Labs() {
   return (
     <div>
       <h1>Labs</h1>
-      <h2>Jaya Sriharshita Koneti</h2>
+      <h2>Jaya Sriharshita Koneti - Section Number: 01</h2>
       <br />
       Code repo link:{" "}
       <a
