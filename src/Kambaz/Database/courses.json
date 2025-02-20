@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "CS1234",
+    "name": "React JS",
+    "number": "RS4550",
+    "image_src": "/images/reactjs.png",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "This course provides an in-depth study of React.js, covering component-based architecture, state management with Redux, hooks, routing, and performance optimization. Students will gain hands-on experience in building scalable and maintainable front-end applications."
+  },
+  {
+    "_id": "CS012",
+    "name": "Angular JS",
+    "number": "RS4560",
+    "image_src": "/images/angularjs.jpg",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "This course explores the fundamentals of Angular.js, including directives, components, services, dependency injection, routing, and reactive programming with RxJS. Students will develop dynamic and responsive web applications using Angular."
+  },
+  {
+    "_id": "CS123",
+    "name": "Database",
+    "number": "RS4570",
+    "image_src": "/images/database.png",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "This course covers fundamental concepts of databases, including relational database design, SQL, normalization, indexing, transactions, and NoSQL databases. Students will gain hands-on experience with database management systems and query optimization."
+  },
+  {
+    "_id": "CS234",
+    "name": "Machine Learning",
+    "number": "CH1230",
+    "image_src": "/images/machinelearning.jpg",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Artificial Intelligence",
+    "credits": 3,
+    "description": "This course introduces machine learning concepts, including supervised and unsupervised learning, neural networks, decision trees, clustering, and reinforcement learning. Students will work with real-world datasets and implement models using Python libraries like Scikit-learn and TensorFlow."
+  },
+  {
+    "_id": "CS345",
+    "name": "Embedded Systems",
+    "number": "CH1240",
+    "image_src": "/images/embeddedsystems.jpg",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Electrical and Computer Engineering",
+    "credits": 3,
+    "description": "This course focuses on embedded system design, covering microcontrollers, real-time operating systems, firmware development, and hardware-software integration. Students will work on hands-on projects involving embedded processors and IoT applications."
+  },
+  {
+    "_id": "CS456",
+    "name": "Intro to Python",
+    "number": "CH1250",
+    "image_src": "/images/python.jpg",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "This introductory course teaches the basics of Python programming, covering variables, data structures, control flow, functions, object-oriented programming, and libraries. Students will develop Python-based applications and scripts."
+  },
+  {
+    "_id": "CS567",
+    "name": "Cloud Computing",
+    "number": "ME101",
+    "image_src": "/images/cloudcomputing.jpg",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "This course provides an overview of cloud computing concepts, covering virtualization, cloud services, distributed computing, security, and deployment on platforms like AWS, Azure, and Google Cloud. Students will work on hands-on cloud-based projects.",
+    "author": "654f9ec2ea7ead465908d1e3"
+  },
+  {
+    "_id": "CS678",
+    "name": "Kafka",
+    "number": "ME102",
+    "image_src": "/images/kafka.png",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Software Engineering",
+    "credits": 4,
+    "description": "This course explores Apache Kafka, a distributed streaming platform. Topics include event-driven architecture, Kafka producers and consumers, stream processing with Kafka Streams, and integration with distributed systems. Students will build real-time data processing applications using Kafka.",
+    "author": "654f9ec2ea7ead465908d1e3"
+  }
+]

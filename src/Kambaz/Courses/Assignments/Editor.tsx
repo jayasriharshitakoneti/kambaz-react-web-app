@@ -1,33 +1,48 @@
+import { Link, useParams } from "react-router";
+import * as db from "../../Database";
 import { Button, Col, Form, Row } from "react-bootstrap";
 
 export default function AssignmentEditor() {
+  const { cid, aid } = useParams();
+  const assignment = db.assignments.find(
+    (assignment: any) => assignment._id === aid
+  );
   return (
     <Form id="wd-assignments-editor">
-      <Form.Group as={Col} controlId="assignmentName">
+      <Form.Group as={Col} controlId="formAssignmentName">
         <Form.Label>Assignment Name</Form.Label>
-        <Form.Control type="text" value="A1" />
-      </Form.Group>
-      <br />
-      <Form.Group className="mb-3" controlId="assignmentDescription">
         <Form.Control
-          as="textarea"
-          rows={10}
-          cols={50}
-          value={
-            "The assignment is available online. Kindly submit a Netlify URL."
-          }
+          type="text"
+          className="w-75"
+          placeholder="A1"
+          value={assignment?.name}
+          readOnly
         />
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" controlId="assignmentPoints">
-        <Form.Label column sm={2}>
+      <br />
+      <Form.Group className="mb-3" controlId="formAssignmentDescription">
+        <Form.Control
+          as="textarea"
+          className="w-75"
+          rows={10}
+          cols={50}
+          value={assignment?.description}
+        />
+      </Form.Group>
+      <Form.Group as={Row} className="mb-3" controlId="formAssignmentPoints">
+        <Form.Label column sm={2} className="d-flex justify-content-end">
           Points
         </Form.Label>
         <Col sm={10}>
-          <Form.Control className="w-50" type="text" value={100} />
+          <Form.Control
+            className="w-50"
+            type="text"
+            value={assignment?.points}
+          />
         </Col>
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" controlId="assignmentGroup">
-        <Form.Label column sm={2}>
+      <Form.Group as={Row} className="mb-3" controlId="formAssignmentGroup">
+        <Form.Label column sm={2} className="d-flex justify-content-end">
           Assignment Group
         </Form.Label>
         <Col sm={10}>
@@ -39,35 +54,38 @@ export default function AssignmentEditor() {
           </Form.Select>
         </Col>
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" controlId="assignmentGradeDisplay">
-        <Form.Label column sm={2}>
+      <Form.Group
+        as={Row}
+        className="mb-3"
+        controlId="formAssignmentGradeDisplay"
+      >
+        <Form.Label column sm={2} className="d-flex justify-content-end">
           Display Grade as
         </Form.Label>
         <Col sm={10}>
           <Form.Select className="w-50">
             <option value="percentage">Percentage</option>
-            <option value="points">CGPA</option>
-            <option value="points">Marks</option>
+            <option value="points">Points</option>
           </Form.Select>
         </Col>
       </Form.Group>
       <Form.Group
         as={Row}
         className="mb-3"
-        controlId="assignmentSubmissionType"
+        controlId="formAssignmentSubmissionType"
       >
-        <Form.Label column sm={2}>
+        <Form.Label column sm={2} className="d-flex justify-content-end">
           Submission Type
         </Form.Label>
         <Col sm={10} className="border border-secondary w-50 rounded-3 p-3">
           <Form.Select>
             <option value="online">Online</option>
-            <option value="offline">Mail</option>
+            <option value="offline">Offline</option>
           </Form.Select>
           <Form.Group
             as={Row}
             className="my-2"
-            controlId="assignmentOnlineEntryOptions"
+            controlId="formAssignmentOnlineEntryOptions"
           >
             <Form.Label column className="fw-bold">
               Online Entry Options
@@ -105,52 +123,70 @@ export default function AssignmentEditor() {
           </Form.Group>
         </Col>
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" controlId="assignmentAssignTo">
-        <Form.Label column sm={2}>
+      <Form.Group as={Row} className="mb-3" controlId="formAssignmentAssignTo">
+        <Form.Label column sm={2} className="d-flex justify-content-end">
           Assign
         </Form.Label>
         <Col sm={10} className="border border-secondary w-50 rounded-3 p-3">
-          <Form.Group className="mb-3" controlId="assignmentAssignTo">
+          <Form.Group className="mb-3" controlId="formAssignmentAssignTo">
             <Form.Label column>Assign To</Form.Label>
-            <div className="d-flex align-items-center">
-              <div className="badge bg-secondary me-2 d-flex align-items-center">
-                Everyone
-                <button
-                  type="button"
-                  className="btn-close btn-close-white ms-2"
-                  aria-label="Remove"
-                  style={{ fontSize: "0.75rem" }}
-                ></button>
-              </div>
-            </div>
+            <Form.Control type="text" value="Everyone" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="assignmentDueDate">
+          <Form.Group className="mb-3" controlId="formAssignmentDueDate">
             <Form.Label column>Due</Form.Label>
-            <Form.Control type="date" value="2025-05-18" />
+            <Form.Control type="date" value={assignment?.due_date} />
           </Form.Group>
           <Form.Group as={Row}>
             <Col>
-              <Form.Group className="mb-3" controlId="assignmentAvailableFrom">
+              <Form.Group
+                className="mb-3"
+                controlId="formAssignmentAvailableFrom"
+              >
                 <Form.Label>Available from</Form.Label>
-                <Form.Control type="date" value="2025-05-01" />
+                <Form.Control type="date" value={assignment?.start_date} />
               </Form.Group>
             </Col>
             <Col>
-              <Form.Group className="mb-3" controlId="assignmentAvailableUntil">
+              <Form.Group
+                className="mb-3"
+                controlId="formAssignmentAvailableUntil"
+              >
                 <Form.Label>Until</Form.Label>
-                <Form.Control type="date" value="2025-05-12" />
+                <Form.Control type="date" value="2024-05-20" />
               </Form.Group>
             </Col>
           </Form.Group>
         </Col>
       </Form.Group>
-      <div className="float-end mx-5">
-        <Button variant="secondary" className="mx-2" id="wd-cancel">
-          Cancel
-        </Button>
-        <Button variant="danger" className="mx-2" id="wd-save">
-          Save
-        </Button>
+
+      <br />
+      <div className="d-flex justify-content-end w-75">
+        <Link
+          to={`/Kambaz/Courses/${cid}/Assignments`}
+          className="wd-assignment-link d-block"
+        >
+          <Button
+            variant="secondary"
+            size="lg"
+            className="me-1 float-end"
+            id="wd-add-module-btn"
+          >
+            Save
+          </Button>
+        </Link>
+        <Link
+          to={`/Kambaz/Courses/${cid}/Assignments`}
+          className="wd-assignment-link d-block"
+        >
+          <Button
+            variant="danger"
+            size="lg"
+            className="me-1 float-end"
+            id="wd-add-module-btn"
+          >
+            Cancel
+          </Button>
+        </Link>
       </div>
     </Form>
   );

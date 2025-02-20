@@ -1,0 +1,218 @@
+[
+  {
+    "_id": "A201",
+    "name": "React Component Development",
+    "description": "Build reusable React components with props and state.",
+    "course": "CS1234",
+    "start_date": "2025-03-10",
+    "due_date": "2025-03-15",
+    "points": 100
+  },
+  {
+    "_id": "A202",
+    "name": "React State Management with Redux",
+    "description": "Implement Redux for global state management in a React app.",
+    "course": "CS1234",
+    "start_date": "2025-03-16",
+    "due_date": "2025-03-22",
+    "points": 100
+  },
+  {
+    "_id": "A203",
+    "name": "React Router and Navigation",
+    "description": "Create a multi-page React application using React Router.",
+    "course": "CS1234",
+    "start_date": "2025-03-23",
+    "due_date": "2025-03-30",
+    "points": 100
+  },
+  {
+    "_id": "A204",
+    "name": "Angular Directives and Components",
+    "description": "Build custom Angular components and directives.",
+    "course": "CS012",
+    "start_date": "2025-03-11",
+    "due_date": "2025-03-17",
+    "points": 100
+  },
+  {
+    "_id": "A205",
+    "name": "Angular Forms and Validation",
+    "description": "Implement reactive and template-driven forms with validation.",
+    "course": "CS012",
+    "start_date": "2025-03-18",
+    "due_date": "2025-03-24",
+    "points": 100
+  },
+  {
+    "_id": "A206",
+    "name": "Angular Routing and Lazy Loading",
+    "description": "Implement routing and lazy loading in an Angular project.",
+    "course": "CS012",
+    "start_date": "2025-03-25",
+    "due_date": "2025-03-31",
+    "points": 100
+  },
+  {
+    "_id": "A207",
+    "name": "SQL Queries and Database Normalization",
+    "description": "Write SQL queries and normalize a relational database schema.",
+    "course": "CS123",
+    "start_date": "2025-03-10",
+    "due_date": "2025-03-17",
+    "points": 100
+  },
+  {
+    "_id": "A208",
+    "name": "Indexing and Query Optimization",
+    "description": "Optimize SQL queries using indexing techniques.",
+    "course": "CS123",
+    "start_date": "2025-03-18",
+    "due_date": "2025-03-24",
+    "points": 100
+  },
+  {
+    "_id": "A209",
+    "name": "NoSQL Database Implementation",
+    "description": "Design and implement a NoSQL database schema.",
+    "course": "CS123",
+    "start_date": "2025-03-25",
+    "due_date": "2025-04-02",
+    "points": 100
+  },
+  {
+    "_id": "A210",
+    "name": "Machine Learning Model Training",
+    "description": "Train a regression model using a real-world dataset.",
+    "course": "CS234",
+    "start_date": "2025-03-12",
+    "due_date": "2025-03-19",
+    "points": 100
+  },
+  {
+    "_id": "A211",
+    "name": "Neural Networks for Classification",
+    "description": "Implement and train a neural network for image classification.",
+    "course": "CS234",
+    "start_date": "2025-03-20",
+    "due_date": "2025-03-27",
+    "points": 100
+  },
+  {
+    "_id": "A212",
+    "name": "Unsupervised Learning with Clustering",
+    "description": "Apply K-Means and hierarchical clustering to a dataset.",
+    "course": "CS234",
+    "start_date": "2025-03-28",
+    "due_date": "2025-04-04",
+    "points": 100
+  },
+  {
+    "_id": "A213",
+    "name": "Microcontroller Programming",
+    "description": "Write and deploy a program for an Arduino microcontroller.",
+    "course": "CS345",
+    "start_date": "2025-03-13",
+    "due_date": "2025-03-20",
+    "points": 100
+  },
+  {
+    "_id": "A214",
+    "name": "Embedded System Design",
+    "description": "Develop an embedded system for sensor data collection.",
+    "course": "CS345",
+    "start_date": "2025-03-21",
+    "due_date": "2025-03-28",
+    "points": 100
+  },
+  {
+    "_id": "A215",
+    "name": "IoT-Based Embedded System",
+    "description": "Connect an embedded system to an IoT cloud platform.",
+    "course": "CS345",
+    "start_date": "2025-03-29",
+    "due_date": "2025-04-05",
+    "points": 100
+  },
+  {
+    "_id": "A216",
+    "name": "Deploying a Web App on AWS",
+    "description": "Host a full-stack web application on AWS EC2 and S3.",
+    "course": "CS567",
+    "start_date": "2025-03-14",
+    "due_date": "2025-03-21",
+    "points": 100
+  },
+  {
+    "_id": "A217",
+    "name": "Serverless Computing with AWS Lambda",
+    "description": "Create a serverless application using AWS Lambda and API Gateway.",
+    "course": "CS567",
+    "start_date": "2025-03-22",
+    "due_date": "2025-03-29",
+    "points": 100
+  },
+  {
+    "_id": "A218",
+    "name": "Cloud Security & IAM Management",
+    "description": "Configure IAM roles and permissions for secure cloud applications.",
+    "course": "CS567",
+    "start_date": "2025-03-30",
+    "due_date": "2025-04-06",
+    "points": 100
+  },
+  {
+    "_id": "A219",
+    "name": "Kafka Producer-Consumer System",
+    "description": "Develop a Kafka producer-consumer system to handle message streaming.",
+    "course": "CS678",
+    "start_date": "2025-03-15",
+    "due_date": "2025-03-22",
+    "points": 100
+  },
+  {
+    "_id": "A220",
+    "name": "Real-Time Data Processing with Kafka Streams",
+    "description": "Use Kafka Streams API to process real-time data streams.",
+    "course": "CS678",
+    "start_date": "2025-03-23",
+    "due_date": "2025-03-30",
+    "points": 100
+  },
+  {
+    "_id": "A221",
+    "name": "Kafka Integration with Spark",
+    "description": "Integrate Kafka with Apache Spark for big data streaming.",
+    "course": "CS678",
+    "start_date": "2025-04-01",
+    "due_date": "2025-04-08",
+    "points": 100
+  },
+  {
+    "_id": "A125",
+    "name": "Python Basics and Data Structures",
+    "description": "Write Python scripts to demonstrate the use of variables, loops, and data structures (lists, tuples, dictionaries).",
+    "course": "CS456",
+    "start_date": "2025-03-10",
+    "due_date": "2025-03-15",
+    "points": 100
+  },
+  {
+    "_id": "A126",
+    "name": "Object-Oriented Programming in Python",
+    "description": "Implement a Python program using classes, objects, inheritance, and polymorphism.",
+    "course": "CS456",
+    "start_date": "2025-03-18",
+    "due_date": "2025-03-24",
+    "points": 100
+  },
+  {
+    "_id": "A127",
+    "name": "File Handling and Exception Handling",
+    "description": "Develop a Python application that reads and writes files while implementing proper exception handling.",
+    "course": "CS456",
+    "start_date": "2025-03-26",
+    "due_date": "2025-04-01",
+    "points": 100
+  }
+]

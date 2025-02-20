@@ -1,0 +1,626 @@
+[
+  {
+    "_id": "M201",
+    "name": "React Fundamentals",
+    "description": "An introduction to the basics of React, including components, JSX, and state management.",
+    "course": "CS1234",
+    "lessons": [
+      {
+        "_id": "L2011",
+        "name": "JSX and Components",
+        "description": "Understanding JSX syntax and building reusable components.",
+        "module": "M201"
+      },
+      {
+        "_id": "L2012",
+        "name": "State and Props",
+        "description": "Managing component state and passing data using props in React.",
+        "module": "M201"
+      },
+      {
+        "_id": "L2013",
+        "name": "Event Handling",
+        "description": "Handling user interactions and events in React applications.",
+        "module": "M201"
+      }
+    ]
+  },
+  {
+    "_id": "M202",
+    "name": "Advanced React Concepts",
+    "description": "Exploring React Hooks, Context API, and performance optimization techniques.",
+    "course": "CS1234",
+    "lessons": [
+      {
+        "_id": "L2021",
+        "name": "React Hooks (useState, useEffect)",
+        "description": "Utilizing hooks to manage state and side effects in functional components.",
+        "module": "M202"
+      },
+      {
+        "_id": "L2022",
+        "name": "Context API",
+        "description": "Managing global state with Context API in React applications.",
+        "module": "M202"
+      },
+      {
+        "_id": "L2023",
+        "name": "Performance Optimization",
+        "description": "Improving React performance with memoization, lazy loading, and code splitting.",
+        "module": "M202"
+      }
+    ]
+  },
+  {
+    "_id": "M203",
+    "name": "React Routing and State Management",
+    "description": "Implementing navigation and state management in large-scale React applications.",
+    "course": "CS1234",
+    "lessons": [
+      {
+        "_id": "L2031",
+        "name": "React Router Basics",
+        "description": "Setting up and using React Router for navigation.",
+        "module": "M203"
+      },
+      {
+        "_id": "L2032",
+        "name": "Dynamic and Nested Routing",
+        "description": "Creating dynamic and nested routes with React Router.",
+        "module": "M203"
+      },
+      {
+        "_id": "L2033",
+        "name": "State Management with Redux",
+        "description": "Using Redux for managing global state in React applications.",
+        "module": "M203"
+      }
+    ]
+  },
+  {
+    "_id": "M301",
+    "name": "Angular Fundamentals",
+    "description": "An introduction to Angular's core concepts, including components, templates, and data binding.",
+    "course": "CS012",
+    "lessons": [
+      {
+        "_id": "L3011",
+        "name": "Introduction to Angular and Setup",
+        "description": "Understanding Angular architecture and setting up an Angular project.",
+        "module": "M301"
+      },
+      {
+        "_id": "L3012",
+        "name": "Components and Templates",
+        "description": "Building Angular components and using templates to define UI structure.",
+        "module": "M301"
+      },
+      {
+        "_id": "L3013",
+        "name": "Data Binding and Event Handling",
+        "description": "Exploring property binding, event binding, and two-way data binding in Angular.",
+        "module": "M301"
+      }
+    ]
+  },
+  {
+    "_id": "M302",
+    "name": "Advanced Angular Concepts",
+    "description": "Exploring Angular services, dependency injection, and performance optimization.",
+    "course": "CS012",
+    "lessons": [
+      {
+        "_id": "L3021",
+        "name": "Dependency Injection and Services",
+        "description": "Understanding Angular's dependency injection system and using services for data management.",
+        "module": "M302"
+      },
+      {
+        "_id": "L3022",
+        "name": "Directives and Pipes",
+        "description": "Creating custom directives and pipes to manipulate the DOM and format data.",
+        "module": "M302"
+      },
+      {
+        "_id": "L3023",
+        "name": "Angular Performance Optimization",
+        "description": "Improving performance using lazy loading, change detection strategies, and onPush.",
+        "module": "M302"
+      }
+    ]
+  },
+  {
+    "_id": "M303",
+    "name": "Angular Routing and State Management",
+    "description": "Implementing navigation and managing state in Angular applications.",
+    "course": "CS012",
+    "lessons": [
+      {
+        "_id": "L3031",
+        "name": "Angular Router Basics",
+        "description": "Setting up navigation using Angular Router.",
+        "module": "M303"
+      },
+      {
+        "_id": "L3032",
+        "name": "Lazy Loading Modules",
+        "description": "Optimizing Angular applications by loading modules on demand.",
+        "module": "M303"
+      },
+      {
+        "_id": "L3033",
+        "name": "State Management with NgRx",
+        "description": "Using NgRx to manage global state in Angular applications.",
+        "module": "M303"
+      }
+    ]
+  },
+  {
+    "_id": "M401",
+    "name": "Database Fundamentals",
+    "description": "An introduction to databases, relational models, and SQL fundamentals.",
+    "course": "CS123",
+    "lessons": [
+      {
+        "_id": "L4011",
+        "name": "Introduction to Databases",
+        "description": "Understanding the basics of databases, types, and their applications.",
+        "module": "M401"
+      },
+      {
+        "_id": "L4012",
+        "name": "Relational Model and ER Diagrams",
+        "description": "Exploring entity-relationship diagrams and relational database concepts.",
+        "module": "M401"
+      },
+      {
+        "_id": "L4013",
+        "name": "SQL Basics",
+        "description": "Writing basic SQL queries including SELECT, INSERT, UPDATE, and DELETE.",
+        "module": "M401"
+      }
+    ]
+  },
+  {
+    "_id": "M402",
+    "name": "Advanced Database Concepts",
+    "description": "Deep dive into database normalization, indexing, and transactions.",
+    "course": "CS123",
+    "lessons": [
+      {
+        "_id": "L4021",
+        "name": "Normalization and Schema Design",
+        "description": "Understanding normalization forms and designing efficient schemas.",
+        "module": "M402"
+      },
+      {
+        "_id": "L4022",
+        "name": "Indexing and Query Optimization",
+        "description": "Using indexes and optimizing SQL queries for performance.",
+        "module": "M402"
+      },
+      {
+        "_id": "L4023",
+        "name": "Transactions and Concurrency Control",
+        "description": "Managing transactions, ACID properties, and handling concurrency issues.",
+        "module": "M402"
+      }
+    ]
+  },
+  {
+    "_id": "M403",
+    "name": "NoSQL and Big Data",
+    "description": "Exploring NoSQL databases, their advantages, and big data concepts.",
+    "course": "CS123",
+    "lessons": [
+      {
+        "_id": "L4031",
+        "name": "Introduction to NoSQL",
+        "description": "Understanding NoSQL databases and their use cases.",
+        "module": "M403"
+      },
+      {
+        "_id": "L4032",
+        "name": "Types of NoSQL Databases",
+        "description": "Exploring key-value, document, column-family, and graph databases.",
+        "module": "M403"
+      },
+      {
+        "_id": "L4033",
+        "name": "Big Data and Distributed Databases",
+        "description": "Introduction to distributed databases and big data technologies like Hadoop and Spark.",
+        "module": "M403"
+      }
+    ]
+  },
+  {
+    "_id": "M501",
+    "name": "Machine Learning Fundamentals",
+    "description": "An introduction to machine learning concepts, types, and core algorithms.",
+    "course": "CS234",
+    "lessons": [
+      {
+        "_id": "L5011",
+        "name": "Introduction to Machine Learning",
+        "description": "Understanding machine learning, types, and real-world applications.",
+        "module": "M501"
+      },
+      {
+        "_id": "L5012",
+        "name": "Supervised vs. Unsupervised Learning",
+        "description": "Differentiating between supervised and unsupervised learning techniques.",
+        "module": "M501"
+      },
+      {
+        "_id": "L5013",
+        "name": "Regression and Classification",
+        "description": "Exploring regression and classification models with real-world examples.",
+        "module": "M501"
+      }
+    ]
+  },
+  {
+    "_id": "M502",
+    "name": "Model Training and Optimization",
+    "description": "Techniques for training machine learning models and optimizing their performance.",
+    "course": "CS234",
+    "lessons": [
+      {
+        "_id": "L5021",
+        "name": "Data Preprocessing and Feature Engineering",
+        "description": "Cleaning datasets and transforming features for better model performance.",
+        "module": "M502"
+      },
+      {
+        "_id": "L5022",
+        "name": "Model Evaluation Metrics",
+        "description": "Using metrics like accuracy, precision, recall, and F1-score to evaluate models.",
+        "module": "M502"
+      },
+      {
+        "_id": "L5023",
+        "name": "Hyperparameter Tuning and Optimization",
+        "description": "Using techniques like grid search and random search for model optimization.",
+        "module": "M502"
+      }
+    ]
+  },
+  {
+    "_id": "M503",
+    "name": "Deep Learning and Neural Networks",
+    "description": "Introduction to deep learning concepts, neural networks, and frameworks.",
+    "course": "CS234",
+    "lessons": [
+      {
+        "_id": "L5031",
+        "name": "Introduction to Neural Networks",
+        "description": "Understanding artificial neural networks and their applications.",
+        "module": "M503"
+      },
+      {
+        "_id": "L5032",
+        "name": "Convolutional Neural Networks (CNNs)",
+        "description": "Exploring CNNs for image processing and classification tasks.",
+        "module": "M503"
+      },
+      {
+        "_id": "L5033",
+        "name": "Recurrent Neural Networks (RNNs) and LSTMs",
+        "description": "Understanding RNNs and LSTMs for sequential data processing.",
+        "module": "M503"
+      }
+    ]
+  },
+  {
+    "_id": "M601",
+    "name": "Introduction to Embedded Systems",
+    "description": "Understanding the basics of embedded systems, microcontrollers, and real-time processing.",
+    "course": "CS345",
+    "lessons": [
+      {
+        "_id": "L6011",
+        "name": "Overview of Embedded Systems",
+        "description": "Introduction to embedded systems, their applications, and key components.",
+        "module": "M601"
+      },
+      {
+        "_id": "L6012",
+        "name": "Microcontrollers and Microprocessors",
+        "description": "Understanding microcontrollers, their architecture, and programming.",
+        "module": "M601"
+      },
+      {
+        "_id": "L6013",
+        "name": "Real-Time Operating Systems (RTOS)",
+        "description": "Exploring RTOS concepts, scheduling, and task management.",
+        "module": "M601"
+      }
+    ]
+  },
+  {
+    "_id": "M602",
+    "name": "Embedded System Design and Development",
+    "description": "Techniques for designing and developing embedded systems, including hardware-software integration.",
+    "course": "CS345",
+    "lessons": [
+      {
+        "_id": "L6021",
+        "name": "Hardware-Software Co-Design",
+        "description": "Understanding how hardware and software interact in embedded systems.",
+        "module": "M602"
+      },
+      {
+        "_id": "L6022",
+        "name": "Interfacing with Sensors and Actuators",
+        "description": "Connecting embedded systems to external hardware components.",
+        "module": "M602"
+      },
+      {
+        "_id": "L6023",
+        "name": "Communication Protocols (UART, I2C, SPI)",
+        "description": "Using serial communication protocols for embedded system integration.",
+        "module": "M602"
+      }
+    ]
+  },
+  {
+    "_id": "M603",
+    "name": "Embedded Systems Applications and Optimization",
+    "description": "Exploring practical applications, optimization techniques, and power management in embedded systems.",
+    "course": "CS345",
+    "lessons": [
+      {
+        "_id": "L6031",
+        "name": "Low Power Design in Embedded Systems",
+        "description": "Techniques to optimize power consumption for battery-operated devices.",
+        "module": "M603"
+      },
+      {
+        "_id": "L6032",
+        "name": "Embedded Systems Security",
+        "description": "Implementing security measures for embedded applications.",
+        "module": "M603"
+      },
+      {
+        "_id": "L6033",
+        "name": "Embedded Systems in IoT",
+        "description": "Integrating embedded systems with Internet of Things (IoT) applications.",
+        "module": "M603"
+      }
+    ]
+  },
+  {
+    "_id": "M701",
+    "name": "Cloud Computing Fundamentals",
+    "description": "An introduction to cloud computing concepts, models, and service providers.",
+    "course": "CS567",
+    "lessons": [
+      {
+        "_id": "L7011",
+        "name": "Introduction to Cloud Computing",
+        "description": "Understanding cloud computing, its benefits, and common use cases.",
+        "module": "M701"
+      },
+      {
+        "_id": "L7012",
+        "name": "Cloud Service Models (IaaS, PaaS, SaaS)",
+        "description": "Exploring different cloud service models and their applications.",
+        "module": "M701"
+      },
+      {
+        "_id": "L7013",
+        "name": "Cloud Deployment Models",
+        "description": "Understanding public, private, hybrid, and multi-cloud architectures.",
+        "module": "M701"
+      }
+    ]
+  },
+  {
+    "_id": "M702",
+    "name": "Cloud Infrastructure and Services",
+    "description": "Exploring cloud platforms, storage, and networking services.",
+    "course": "CS567",
+    "lessons": [
+      {
+        "_id": "L7021",
+        "name": "Virtualization and Containers",
+        "description": "Understanding virtualization technologies and containerization with Docker.",
+        "module": "M702"
+      },
+      {
+        "_id": "L7022",
+        "name": "Cloud Storage Services",
+        "description": "Exploring cloud storage options like AWS S3, Google Cloud Storage, and Azure Blob Storage.",
+        "module": "M702"
+      },
+      {
+        "_id": "L7023",
+        "name": "Cloud Networking and Security",
+        "description": "Understanding cloud networking concepts and security best practices.",
+        "module": "M702"
+      }
+    ]
+  },
+  {
+    "_id": "M703",
+    "name": "Cloud Application Deployment and Management",
+    "description": "Learning how to deploy, manage, and monitor cloud-based applications.",
+    "course": "CS567",
+    "lessons": [
+      {
+        "_id": "L7031",
+        "name": "Serverless Computing",
+        "description": "Introduction to serverless computing with AWS Lambda, Azure Functions, and Google Cloud Functions.",
+        "module": "M703"
+      },
+      {
+        "_id": "L7032",
+        "name": "CI/CD in the Cloud",
+        "description": "Implementing continuous integration and deployment using cloud-based tools.",
+        "module": "M703"
+      },
+      {
+        "_id": "L7033",
+        "name": "Cloud Monitoring and Logging",
+        "description": "Using tools like AWS CloudWatch, Azure Monitor, and Google Cloud Logging for cloud application monitoring.",
+        "module": "M703"
+      }
+    ]
+  },
+  {
+    "_id": "M801",
+    "name": "Introduction to Kafka",
+    "description": "Understanding the fundamentals of Apache Kafka and its architecture.",
+    "course": "CS678",
+    "lessons": [
+      {
+        "_id": "L8011",
+        "name": "Overview of Apache Kafka",
+        "description": "Understanding Kafka as a distributed event streaming platform and its key use cases.",
+        "module": "M801"
+      },
+      {
+        "_id": "L8012",
+        "name": "Kafka Architecture and Components",
+        "description": "Exploring Kafka topics, producers, consumers, partitions, and brokers.",
+        "module": "M801"
+      },
+      {
+        "_id": "L8013",
+        "name": "Kafka Installation and Setup",
+        "description": "Setting up a local Kafka cluster and running a basic producer-consumer example.",
+        "module": "M801"
+      }
+    ]
+  },
+  {
+    "_id": "M802",
+    "name": "Working with Kafka Producers and Consumers",
+    "description": "Learning how to produce and consume messages in Apache Kafka.",
+    "course": "CS678",
+    "lessons": [
+      {
+        "_id": "L8021",
+        "name": "Kafka Producers",
+        "description": "Implementing Kafka producers, configuring partitions, and sending messages.",
+        "module": "M802"
+      },
+      {
+        "_id": "L8022",
+        "name": "Kafka Consumers and Consumer Groups",
+        "description": "Understanding consumer groups, message offsets, and load balancing.",
+        "module": "M802"
+      },
+      {
+        "_id": "L8023",
+        "name": "Handling Data Streams in Kafka",
+        "description": "Managing high-throughput real-time data streams using Kafka.",
+        "module": "M802"
+      }
+    ]
+  },
+  {
+    "_id": "M803",
+    "name": "Kafka Stream Processing and Integration",
+    "description": "Exploring Kafka Streams, Connect, and integration with big data systems.",
+    "course": "CS678",
+    "lessons": [
+      {
+        "_id": "L8031",
+        "name": "Kafka Streams API",
+        "description": "Building real-time data processing applications using Kafka Streams.",
+        "module": "M803"
+      },
+      {
+        "_id": "L8032",
+        "name": "Kafka Connect and Data Pipelines",
+        "description": "Using Kafka Connect for data integration with databases and external systems.",
+        "module": "M803"
+      },
+      {
+        "_id": "L8033",
+        "name": "Monitoring and Securing Kafka",
+        "description": "Implementing logging, monitoring, and security best practices for Kafka clusters.",
+        "module": "M803"
+      }
+    ]
+  },
+  {
+    "_id": "M901",
+    "name": "Python Basics",
+    "description": "An introduction to Python programming, covering syntax, data types, and basic operations.",
+    "course": "CS456",
+    "lessons": [
+      {
+        "_id": "L9011",
+        "name": "Introduction to Python",
+        "description": "Understanding Python's history, installation, and running basic scripts.",
+        "module": "M901"
+      },
+      {
+        "_id": "L9012",
+        "name": "Variables and Data Types",
+        "description": "Exploring Python's data types, including integers, floats, strings, and booleans.",
+        "module": "M901"
+      },
+      {
+        "_id": "L9013",
+        "name": "Control Flow and Loops",
+        "description": "Using if-else conditions, for loops, and while loops to control program flow.",
+        "module": "M901"
+      }
+    ]
+  },
+  {
+    "_id": "M902",
+    "name": "Functions and Data Structures",
+    "description": "Understanding functions, lists, dictionaries, and tuples in Python.",
+    "course": "CS456",
+    "lessons": [
+      {
+        "_id": "L9021",
+        "name": "Defining and Calling Functions",
+        "description": "Creating and using functions with parameters and return values.",
+        "module": "M902"
+      },
+      {
+        "_id": "L9022",
+        "name": "Lists, Tuples, and Dictionaries",
+        "description": "Working with different data structures and their operations.",
+        "module": "M902"
+      },
+      {
+        "_id": "L9023",
+        "name": "List Comprehensions and Lambda Functions",
+        "description": "Using list comprehensions and lambda functions for concise code.",
+        "module": "M902"
+      }
+    ]
+  },
+  {
+    "_id": "M903",
+    "name": "Object-Oriented Programming and File Handling",
+    "description": "Exploring object-oriented programming concepts and file operations in Python.",
+    "course": "CS456",
+    "lessons": [
+      {
+        "_id": "L9031",
+        "name": "Classes and Objects",
+        "description": "Understanding object-oriented programming with classes and instances.",
+        "module": "M903"
+      },
+      {
+        "_id": "L9032",
+        "name": "File Handling in Python",
+        "description": "Reading, writing, and working with files in Python.",
+        "module": "M903"
+      },
+      {
+        "_id": "L9033",
+        "name": "Error Handling and Exceptions",
+        "description": "Using try-except blocks to handle errors in Python programs.",
+        "module": "M903"
+      }
+    ]
+  }
+]
