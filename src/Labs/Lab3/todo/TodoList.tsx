@@ -6,7 +6,7 @@ export default function TodoList() {
       <h3>Todo List</h3>
       <ul className="list-group">
         {todos.map((todo) => {
-          return <TodoItem key={todo.title} todo={todo} />;
+          return <TodoItem todo={todo} />;
         })}
       </ul>
       <hr />

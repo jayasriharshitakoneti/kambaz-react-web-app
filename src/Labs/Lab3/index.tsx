@@ -34,7 +34,7 @@ export default function Lab3() {
   console.log("Hello World!");
   return (
     <div>
-      <h2>Lab 3 - JavaScript</h2>
+      <h2>Lab 3</h2>
       <VariablesAndConstants />
       <VariableTypes />
       <BooleanVariables />
