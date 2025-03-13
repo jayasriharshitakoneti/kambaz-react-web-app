@@ -1,8 +1,8 @@
+import store from "./Kambaz/store";
+import { Provider } from "react-redux";
 import Labs from "./Labs";
 import Kambaz from "./Kambaz";
 import { HashRouter, Routes, Route, Navigate } from "react-router";
-import { Provider } from "react-redux";
-import store from "./Labs/store";
 export default function App() {
   return (
     <HashRouter>
