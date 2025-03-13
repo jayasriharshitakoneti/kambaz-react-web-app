@@ -182,11 +182,7 @@ export default function Lab1() {
           />
           <br />
           <label htmlFor="wd-text-fields-first-name">First name:</label>
-          <input
-            type="text"
-            title="Harshita"
-            id="wd-text-fields-first-name"
-          />{" "}
+          <input type="text" title="Harshita" id="wd-text-fields-first-name" />
           <br />
           <label htmlFor="wd-text-fields-last-name">Last name:</label>
           <input
@@ -249,13 +245,11 @@ export default function Lab1() {
       <br />
       <select multiple id="wd-select-many-genre">
         <option value="COMEDY" selected>
-          {" "}
-          Comedy{" "}
+          Comedy
         </option>
         <option value="DRAMA"> Drama </option>
         <option value="SCIFI" selected>
-          {" "}
-          Science Fiction{" "}
+          Science Fiction
         </option>
         <option value="FANTASY"> Fantasy </option>
       </select>
@@ -294,7 +288,7 @@ export default function Lab1() {
       </a>
       to get dummy text
       <br />
-      Code repo link:{" "}
+      Code repo link:
       <a
         href="https://github.com/jayasriharshitakoneti/kambaz-react-web-app"
         target="_blank"

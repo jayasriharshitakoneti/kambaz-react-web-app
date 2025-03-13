@@ -21,7 +21,7 @@ export default function Padding() {
       wd-border-yellow wd-border-solid 
       wd-bg-color-blue wd-fg-color-white"
       >
-        Padded all around{" "}
+        Padded all around
       </div>
     </div>
   );

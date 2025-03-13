@@ -93,13 +93,13 @@ export default function Float() {
         <h2>Float</h2>
         <div>
           <div className="wd-float-left wd-dimension-portrait wd-bg-color-yellow">
-            Yellow{" "}
+            Yellow
           </div>
           <div className="wd-float-left wd-dimension-portrait wd-bg-color-blue wd-fg-color-white">
-            Blue{" "}
+            Blue
           </div>
           <div className="wd-float-left wd-dimension-portrait wd-bg-color-red">
-            Red{" "}
+            Red
           </div>
           <img
             className="wd-float-right"

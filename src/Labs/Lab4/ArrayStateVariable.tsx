@@ -16,7 +16,6 @@ export default function ArrayStateVariable() {
       <ul className="list-unstyled mx-3">
         {array.map((item, index) => (
           <li key={index}>
-            {" "}
             {item}
             <button
               className="btn btn-danger mx-5 my-1"

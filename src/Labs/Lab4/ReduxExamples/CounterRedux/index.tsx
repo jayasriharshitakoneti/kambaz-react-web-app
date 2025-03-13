@@ -12,16 +12,14 @@ export default function CounterRedux() {
         onClick={() => dispatch(increment())}
         id="wd-counter-redux-increment-click"
       >
-        {" "}
-        Increment{" "}
+        Increment
       </button>
       <button
         className="btn btn-danger mx-1"
         onClick={() => dispatch(decrement())}
         id="wd-counter-redux-decrement-click"
       >
-        {" "}
-        Decrement{" "}
+        Decrement
       </button>
       <hr />
     </div>

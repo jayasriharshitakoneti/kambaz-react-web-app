@@ -115,8 +115,7 @@ export default function BootstrapForms() {
         <Form>
           <Form.Group as={Row} className="mb-3">
             <Form.Label column sm={2}>
-              {" "}
-              Email{" "}
+              Email
             </Form.Label>
             <Col sm={10}>
               <Form.Control type="email" placeholder="Email" />
@@ -124,8 +123,7 @@ export default function BootstrapForms() {
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
             <Form.Label column sm={2}>
-              {" "}
-              Password{" "}
+              Password
             </Form.Label>
             <Col sm={10}>
               <Form.Control type="password" placeholder="Password" />
@@ -134,7 +132,7 @@ export default function BootstrapForms() {
           <fieldset>
             <Form.Group as={Row} className="mb-3">
               <Form.Label as="legend" column sm={2}>
-                Radios{" "}
+                Radios
               </Form.Label>
               <Col sm={10}>
                 <Form.Check

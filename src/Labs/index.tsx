@@ -14,7 +14,7 @@ export default function Labs() {
         <h1>Labs</h1>
         <h2>Jaya Sriharshita Koneti - Section Number: 01</h2>
         <br />
-        Code repo link:{" "}
+        Code repo link:
         <a
           href="https://github.com/jayasriharshitakoneti/kambaz-react-web-app"
           target="_blank"

@@ -16,13 +16,13 @@ export default function Classes() {
         Dynamic Blue background
       </div>
       <div className="wd-bg-yellow wd-fg-black wd-padding-10px">
-        Yellow background{" "}
+        Yellow background
       </div>
       <div className="wd-bg-blue wd-fg-black wd-padding-10px">
-        Blue background{" "}
+        Blue background
       </div>
       <div className="wd-bg-red wd-fg-black wd-padding-10px">
-        Red background{" "}
+        Red background
       </div>
       <hr />
     </div>
