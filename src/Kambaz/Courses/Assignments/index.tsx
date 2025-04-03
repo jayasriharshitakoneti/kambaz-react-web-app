@@ -5,10 +5,13 @@ import { Link, useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { FaTrash } from "react-icons/fa";
 import { IoEllipsisVertical } from "react-icons/io5";
-import { deleteAssignment } from "./reducer";
+import { setAssignments, deleteAssignment } from "./reducer";
 import GreenCheckmark from "../Modules/GreenCheckmark";
 import AssignmentButtons from "./AssignmentButtons";
 import AssignmentFunctions from "./AssignmentFunctions";
+import * as coursesClient from "../client";
+import * as assignmentsClient from "./client";
+import { useEffect } from "react";
 
 export default function Assignments() {
   const dispatch = useDispatch();
@@ -21,8 +24,24 @@ export default function Assignments() {
       "Confirm if you want to delete this assignment?"
     );
     if (confirmDelete) {
-      dispatch(deleteAssignment(assignmentId));
+      removeAssignment(assignmentId);
     }
+  };
+
+  const fetchAssignments = async () => {
+    const assignments = await coursesClient.findAssignmentsForCourse(
+      cid as string
+    );
+    dispatch(setAssignments(assignments));
+  };
+
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
+
+  const removeAssignment = async (assignmentId: string) => {
+    await assignmentsClient.deleteAssignment(assignmentId);
+    dispatch(deleteAssignment(assignmentId));
   };
   return (
     <div id="wd-assignments">
@@ -74,7 +93,6 @@ export default function Assignments() {
                       <IoEllipsisVertical className="fs-4" />
                       <FaTrash
                         className="text-danger me-2"
-                        cursor={"pointer"}
                         onClick={() => handleDelete(assignment._id)}
                       />
                     </div>

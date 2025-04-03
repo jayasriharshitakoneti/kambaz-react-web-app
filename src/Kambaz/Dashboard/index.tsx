@@ -1,6 +1,15 @@
 import { Button, Card, Col, FormControl, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import * as enrollmentsClient from "../Courses/Enrollments/client";
+import * as coursesClient from "../Courses/client";
+import {
+  setEnrollments,
+  setShowAllEnrollments,
+  addEnrollment,
+  deleteEnrollment,
+} from "../Courses/Enrollments/reducer";
+import { useEffect, useState } from "react";
 
 export default function Dashboard({
   courses,
@@ -17,11 +26,118 @@ export default function Dashboard({
   deleteCourse: (course: any) => void;
   updateCourse: () => void;
 }) {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   // const { enrollments, showAllEnrollments } = useSelector(
   //   (state: any) => state.enrollmentReducer
   // );
+
+  const { enrollments, showAllEnrollments } = useSelector(
+    (state: any) => state.enrollmentReducer
+  );
+
+  const [allCourses, setAllCourses] = useState(courses);
+
+  const fetchEnrollments = async () => {
+    if (currentUser && currentUser._id) {
+      try {
+        const enrollments = await enrollmentsClient.findEnrollments(
+          currentUser._id
+        );
+
+        dispatch(setEnrollments(enrollments));
+      } catch (error) {
+        console.error("Error fetching enrollments:", error);
+      }
+    }
+  };
+
+  const loadAllCourses = async () => {
+    try {
+      const fetchedCourses = await coursesClient.fetchAllCourses();
+
+      setAllCourses(fetchedCourses);
+    } catch (error) {
+      console.error("Error fetching all courses: ", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchEnrollments();
+  }, [currentUser]);
+
+  useEffect(() => {
+    loadAllCourses();
+  }, []);
+
+  const toggleEnrollmentView = () => {
+    // console.log("Toggling enrollment view");
+
+    dispatch(setShowAllEnrollments(!showAllEnrollments));
+  };
+
+  const showCourses = () => {
+    // console.log("showAllEnrollments:", showAllEnrollments);
+
+    if (currentUser?.role === "FACULTY") {
+      return allCourses;
+    }
+
+    if (showAllEnrollments) {
+      return allCourses.filter((course) =>
+        enrollments.some(
+          (enrollment: any) =>
+            enrollment.user === currentUser._id &&
+            enrollment.course === course._id
+        )
+      );
+    } else {
+      return allCourses;
+    }
+  };
+
+  const enrollmentStatus = allCourses.reduce((status, course) => {
+    status[course._id] =
+      Array.isArray(enrollments) &&
+      enrollments.some(
+        (enrollment: any) =>
+          enrollment.user === currentUser._id &&
+          enrollment.course === course._id
+      );
+
+    return status;
+  }, {});
+
+  const handleAddEnrollment = async (courseId: string) => {
+    try {
+      await enrollmentsClient.enrollUser(currentUser._id, courseId);
+
+      dispatch(addEnrollment({ user: currentUser._id, course: courseId }));
+    } catch (error) {
+      console.error("Error occurred while enrolling user:", error);
+    }
+  };
+
+  const handleDeleteEnrollment = async (courseId: string) => {
+    try {
+      await enrollmentsClient.unenrollUser(currentUser._id, courseId);
+
+      dispatch(deleteEnrollment({ user: currentUser._id, course: courseId }));
+    } catch (error) {
+      console.error("Error occurred while unenrolling user:", error);
+    }
+  };
+
+  const toggleEnrollment = (courseId: string) => {
+    if (enrollmentStatus[courseId]) {
+      handleDeleteEnrollment(courseId);
+    } else {
+      handleAddEnrollment(courseId);
+    }
+  };
+
+  const coursesToShow = showCourses();
+
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
@@ -62,24 +178,27 @@ export default function Dashboard({
         </>
       )}
       <hr />
-      <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
+      <h2 id="wd-dashboard-published">
+        Published Courses ({allCourses.length})
+      </h2>
       <hr />
-      {/* {currentUser?.role === "STUDENT" && (
-        <Button
-          className="mb-3"
-          onClick={() => dispatch(toggleShowAllEnrollments())}
-        >
-          Enrollments
+      {currentUser?.role === "STUDENT" && (
+        <Button className="mb-3" onClick={toggleEnrollmentView}>
+          {showAllEnrollments ? "Show All Courses" : "Show Enrolled Courses"}
         </Button>
-      )} */}
+      )}
       <div id="wd-dashboard-courses">
         <Row xs={1} md={4} className="g-4">
-          {courses.map((course) => {
+          {coursesToShow.map((course) => {
             return (
               <Col className="wd-dashboard-course" style={{ width: "260px" }}>
                 <Card>
                   <Link
-                    to={`/Kambaz/Courses/${course._id}/Home`}
+                    to={
+                      enrollmentStatus[course._id]
+                        ? `/Kambaz/Courses/${course._id}/Home`
+                        : "#"
+                    }
                     className="wd-dashboard-course-link text-decoration-none text-dark"
                   >
                     <Card.Img
@@ -122,6 +241,20 @@ export default function Dashboard({
                             Edit
                           </button>
                         </>
+                      )}
+                      {currentUser?.role === "STUDENT" && (
+                        <Button
+                          variant={
+                            enrollmentStatus[course._id] ? "danger" : "success"
+                          }
+                          className="float-end me-2"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            toggleEnrollment(course._id);
+                          }}
+                        >
+                          {enrollmentStatus[course._id] ? "Unenroll" : "Enroll"}
+                        </Button>
                       )}
                     </Card.Body>
                   </Link>
