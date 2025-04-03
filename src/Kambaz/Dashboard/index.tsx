@@ -71,14 +71,10 @@ export default function Dashboard({
   }, []);
 
   const toggleEnrollmentView = () => {
-    // console.log("Toggling enrollment view");
-
     dispatch(setShowAllEnrollments(!showAllEnrollments));
   };
 
   const showCourses = () => {
-    // console.log("showAllEnrollments:", showAllEnrollments);
-
     if (currentUser?.role === "FACULTY") {
       return allCourses;
     }
@@ -195,9 +191,11 @@ export default function Dashboard({
                 <Card>
                   <Link
                     to={
-                      enrollmentStatus[course._id]
-                        ? `/Kambaz/Courses/${course._id}/Home`
-                        : "#"
+                      currentUser == "STUDENT"
+                        ? enrollmentStatus[course._id]
+                          ? `/Kambaz/Courses/${course._id}/Home`
+                          : "#"
+                        : `/Kambaz/Courses/${course._id}/Home`
                     }
                     className="wd-dashboard-course-link text-decoration-none text-dark"
                   >
