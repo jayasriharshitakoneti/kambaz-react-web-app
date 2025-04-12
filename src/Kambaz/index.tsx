@@ -10,20 +10,19 @@ import * as courseClient from "./Courses/client";
 import Session from "./Account/Session";
 import ProtectedRoute from "./Account/ProtectedRoute";
 import * as userClient from "./Account/client";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setCourses } from "./Courses/reducer";
 
 export default function Kambaz() {
-  const [courses, setCourses] = useState<any[]>([]);
+  const dispatch = useDispatch();
+  const courses = useSelector((state: any) => state.coursesReducer.courses);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const fetchCourses = async () => {
-    try {
-      const courses = await userClient.findMyCourses();
-      setCourses(courses);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+
   useEffect(() => {
+    const fetchCourses = async () => {
+      const fetchedCourses = await courseClient.fetchAllCourses();
+      dispatch(setCourses(fetchedCourses));
+    };
     fetchCourses();
   }, [currentUser]);
 
@@ -37,23 +36,15 @@ export default function Kambaz() {
   });
   const addNewCourse = async () => {
     const newCourse = await userClient.createCourse(course);
-    setCourses([...courses, newCourse]);
+    dispatch({ type: "courses/addCourse", payload: newCourse });
   };
   const deleteCourse = async (courseId: any) => {
     await courseClient.deleteCourse(courseId);
-    setCourses(courses.filter((course) => course._id !== courseId));
+    dispatch({ type: "courses/deleteCourse", payload: courseId });
   };
   const updateCourse = async () => {
-    await courseClient.updateCourse(course);
-    setCourses(
-      courses.map((c) => {
-        if (c._id === course._id) {
-          return course;
-        } else {
-          return c;
-        }
-      })
-    );
+    const updatedCourse = await courseClient.updateCourse(course);
+    dispatch({ type: "courses/updateCourse", payload: updatedCourse });
   };
 
   return (

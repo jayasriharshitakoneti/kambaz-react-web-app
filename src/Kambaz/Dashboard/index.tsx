@@ -2,14 +2,13 @@ import { Button, Card, Col, FormControl, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import * as enrollmentsClient from "../Courses/Enrollments/client";
-import * as coursesClient from "../Courses/client";
 import {
   setEnrollments,
   setShowAllEnrollments,
   addEnrollment,
   deleteEnrollment,
 } from "../Courses/Enrollments/reducer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Dashboard({
   courses,
@@ -28,37 +27,23 @@ export default function Dashboard({
 }) {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  // const { enrollments, showAllEnrollments } = useSelector(
-  //   (state: any) => state.enrollmentReducer
-  // );
 
   const { enrollments, showAllEnrollments } = useSelector(
     (state: any) => state.enrollmentReducer
   );
 
-  const [allCourses, setAllCourses] = useState(courses);
-
   const fetchEnrollments = async () => {
-    if (currentUser && currentUser._id) {
-      try {
-        const enrollments = await enrollmentsClient.findEnrollments(
-          currentUser._id
-        );
-
-        dispatch(setEnrollments(enrollments));
-      } catch (error) {
-        console.error("Error fetching enrollments:", error);
+    if (currentUser.role !== "FACULTY") {
+      if (currentUser && currentUser._id) {
+        try {
+          const enrollments = await enrollmentsClient.findEnrollments(
+            currentUser._id
+          );
+          dispatch(setEnrollments(enrollments));
+        } catch (error) {
+          console.error("Error fetching enrollments:", error);
+        }
       }
-    }
-  };
-
-  const loadAllCourses = async () => {
-    try {
-      const fetchedCourses = await coursesClient.fetchAllCourses();
-
-      setAllCourses(fetchedCourses);
-    } catch (error) {
-      console.error("Error fetching all courses: ", error);
     }
   };
 
@@ -66,21 +51,16 @@ export default function Dashboard({
     fetchEnrollments();
   }, [currentUser]);
 
-  useEffect(() => {
-    loadAllCourses();
-  }, []);
-
   const toggleEnrollmentView = () => {
     dispatch(setShowAllEnrollments(!showAllEnrollments));
   };
 
   const showCourses = () => {
     if (currentUser?.role === "FACULTY") {
-      return allCourses;
+      return courses;
     }
-
     if (showAllEnrollments) {
-      return allCourses.filter((course) =>
+      return courses.filter((course) =>
         enrollments.some(
           (enrollment: any) =>
             enrollment.user === currentUser._id &&
@@ -88,11 +68,11 @@ export default function Dashboard({
         )
       );
     } else {
-      return allCourses;
+      return courses;
     }
   };
 
-  const enrollmentStatus = allCourses.reduce((status, course) => {
+  const enrollmentStatus = courses.reduce((status, course) => {
     status[course._id] =
       Array.isArray(enrollments) &&
       enrollments.some(
@@ -175,7 +155,17 @@ export default function Dashboard({
       )}
       <hr />
       <h2 id="wd-dashboard-published">
-        Published Courses ({allCourses.length})
+        Published Courses (
+        {currentUser?.role === "STUDENT" && showAllEnrollments
+          ? courses.filter((course) =>
+              enrollments.some(
+                (enrollment: any) =>
+                  enrollment.user === currentUser._id &&
+                  enrollment.course === course._id
+              )
+            ).length
+          : courses.length}
+        )
       </h2>
       <hr />
       {currentUser?.role === "STUDENT" && (
@@ -191,7 +181,7 @@ export default function Dashboard({
                 <Card>
                   <Link
                     to={
-                      currentUser == "STUDENT"
+                      currentUser?.role == "STUDENT"
                         ? enrollmentStatus[course._id]
                           ? `/Kambaz/Courses/${course._id}/Home`
                           : "#"
