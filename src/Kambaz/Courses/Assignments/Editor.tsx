@@ -18,7 +18,7 @@ export default function AssignmentEditor() {
 
   const assignmentName = assignment?.name || "";
   const description = assignment?.description || "";
-  const points = assignment?.points || 100;
+  const points = assignment?.points || 0;
   const dueDate = assignment?.due_date || "";
   const availableDate = assignment?.start_date || "";
   const untilDate = assignment?.until_date || "";

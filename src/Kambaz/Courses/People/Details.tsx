@@ -5,12 +5,15 @@ import * as client from "../../Account/client";
 import { FaPencil } from "react-icons/fa6";
 import { FaCheck, FaUserCircle } from "react-icons/fa";
 import { FormControl } from "react-bootstrap";
+import { useSelector } from "react-redux";
+
 export default function PeopleDetails() {
   const { uid } = useParams();
   const [user, setUser] = useState<any>({});
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [editing, setEditing] = useState(false);
+  const { currentUser } = useSelector((state: any) => state.accountReducer);
   const saveUser = async () => {
     const [firstName, lastName] = name.split(" ");
     const updatedUser = { ...user, firstName, lastName };
@@ -49,20 +52,27 @@ export default function PeopleDetails() {
       </div>
       <hr />
       <div className="text-danger fs-4 wd-name">
-        {!editing && (
+        {currentUser?.role === "ADMIN" && !editing && (
           <FaPencil
             onClick={() => setEditing(true)}
             className="float-end fs-5 mt-2 wd-edit"
           />
         )}
-        {editing && (
+        {currentUser?.role === "ADMIN" && editing && (
           <FaCheck
             onClick={() => saveUser()}
             className="float-end fs-5 mt-2 me-2 wd-save"
           />
         )}
         {!editing && (
-          <div className="wd-name" onClick={() => setEditing(true)}>
+          <div
+            className="wd-name"
+            onClick={() => {
+              if (currentUser?.role === "ADMIN") {
+                setEditing(true);
+              }
+            }}
+          >
             {user.firstName} {user.lastName}
           </div>
         )}
@@ -86,20 +96,24 @@ export default function PeopleDetails() {
       <br />
       <b>Total Activity:</b>{" "}
       <span className="wd-total-activity">{user.totalActivity}</span> <hr />
-      <button
-        onClick={() => deleteUser(uid)}
-        className="btn btn-danger float-end wd-delete"
-      >
-        {" "}
-        Delete{" "}
-      </button>
-      <button
-        onClick={() => navigate(-1)}
-        className="btn btn-secondary float-start float-end me-2 wd-cancel"
-      >
-        {" "}
-        Cancel{" "}
-      </button>
+      {currentUser?.role === "ADMIN" && (
+        <button
+          onClick={() => deleteUser(uid)}
+          className="btn btn-danger float-end wd-delete"
+        >
+          {" "}
+          Delete{" "}
+        </button>
+      )}
+      {currentUser?.role === "ADMIN" && (
+        <button
+          onClick={() => navigate(-1)}
+          className="btn btn-secondary float-start float-end me-2 wd-cancel"
+        >
+          {" "}
+          Cancel{" "}
+        </button>
+      )}
     </div>
   );
 }

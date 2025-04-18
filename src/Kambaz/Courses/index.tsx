@@ -5,7 +5,7 @@ import Home from "./Home";
 import Modules from "./Modules";
 import CourseNavigation from "./Navigation";
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router";
-import PeopleTable from "./People/Table";
+import People from "./People";
 
 export default function Courses({ courses }: { courses: any[] }) {
   const { cid } = useParams();
@@ -29,7 +29,7 @@ export default function Courses({ courses }: { courses: any[] }) {
             <Route path="Modules" element={<Modules />} />
             <Route path="Assignments" element={<Assignments />} />
             <Route path="Assignments/:aid" element={<AssignmentEditor />} />
-            <Route path="People" element={<PeopleTable />} />
+            <Route path="People" element={<People />} />
           </Routes>
         </div>
       </div>
