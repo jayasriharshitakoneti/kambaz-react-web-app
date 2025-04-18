@@ -98,7 +98,7 @@ export default function Kambaz() {
   const updateCourse = async () => {
     const updatedCourse = await courseClient.updateCourse(course);
     dispatch({ type: "courses/updateCourse", payload: updatedCourse });
-    await fetchCourses();
+    await findCoursesForUser();
   };
 
   return (
