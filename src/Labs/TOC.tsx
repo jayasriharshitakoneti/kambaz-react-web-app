@@ -25,7 +25,7 @@ export default function TOC() {
         <Nav.Link href="#/Kambaz">Kambaz</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="https://kambaz-node-server-app-harshita.onrender.com">
+        <Nav.Link href="https://a6-kambaz-node-server-app-harshita.onrender.com">
           Node - Render.com link
         </Nav.Link>
       </Nav.Item>
