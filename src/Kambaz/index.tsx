@@ -92,8 +92,15 @@ export default function Kambaz() {
     dispatch({ type: "courses/addCourse", payload: newCourse });
   };
   const deleteCourse = async (courseId: any) => {
-    await courseClient.deleteCourse(courseId);
+    const enrolledUsersInCourse = await courseClient.findUsersForCourse(
+      courseId
+    );
+    for (const user of enrolledUsersInCourse) {
+      await userClient.unenrollFromCourse(user._id, courseId);
+    }
+    const status = await courseClient.deleteCourse(courseId);
     dispatch({ type: "courses/deleteCourse", payload: courseId });
+    console.log(status);
   };
   const updateCourse = async () => {
     const updatedCourse = await courseClient.updateCourse(course);
