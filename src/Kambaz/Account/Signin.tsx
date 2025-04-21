@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { setCurrentUser } from "./reducer";
 import { useDispatch } from "react-redux";
 import * as client from "./client";
-import { Button, FormControl } from "react-bootstrap";
+import { Button, Container, FormControl } from "react-bootstrap";
 export default function Signin() {
   const [credentials, setCredentials] = useState<any>({});
   const dispatch = useDispatch();
@@ -46,6 +46,23 @@ export default function Signin() {
       <Link id="wd-signup-link" to="/Kambaz/Account/Signup">
         Sign up
       </Link>
+      <br />
+      <br />
+      <br />
+      <br />
+      <Container className="project-team-details">
+        <h1>Project - Quizzes</h1>
+        <h2>Team - KoRe</h2>
+        <h3>Likhith Reddy Rechintala - Grad</h3>
+        <h3>Jaya Sriharshita Koneti - Grad</h3>
+        <br />
+        <Link to="https://github.com/likhithreddy/kambaz-react-web-app.git">
+          <h5>React Web App Github link</h5>
+        </Link>
+        <Link to="https://github.com/likhithreddy/kambaz-node-server-app.git">
+          <h5>Node Server App Github link</h5>
+        </Link>
+      </Container>
     </div>
   );
 }
